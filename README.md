@@ -8,8 +8,7 @@
     * Description of test hardware: (development boards, sensors, actuators, laptop + OS, etc) : The laptop, SAM W25 Xplained Pro development board, SD card.
 
 ## 1. Video Presentation
-![Final_Video_Presentation](Final_Video_Presentation.mp4)
-You can also watch it on Google Drive: [Final_Video_Presentation](https://drive.google.com/file/d/1SnDz7Wh9IL8G6lDfHzbvuNYeVGlQYDE1/view?usp=sharing).
+You can watch it on Google Drive: [Final_Video_Presentation](https://drive.google.com/file/d/1SnDz7Wh9IL8G6lDfHzbvuNYeVGlQYDE1/view?usp=sharing).
 
 ## 2. Project Summary
 
