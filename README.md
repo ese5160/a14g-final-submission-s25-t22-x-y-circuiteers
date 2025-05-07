@@ -77,9 +77,9 @@ Through **ESE5160**, we gained practical skills in:
 This course gave us end-to-end experience in building a complete IoT system, blending embedded systems with real-world applications.
 
 ### Project Links
-Frontend Node_RED Link: http://52.224.120.179:1880/ui/#!/0?socketid=mmrCvhwkhdHmjPopAADz
-Backend Node_RED Link: http://52.224.120.179:1880/#flow/80e1a0e60252a46e
-PCBA on Altium 365： https://upenn-eselabs.365.altium.com/designs/A79E618E-7113-4BD9-AB95-6F9120FF25BC
+- Frontend Node_RED Link: http://52.224.120.179:1880/ui/#!/0?socketid=mmrCvhwkhdHmjPopAADz
+- Backend Node_RED Link: http://52.224.120.179:1880/#flow/80e1a0e60252a46e
+- PCBA on Altium 365： https://upenn-eselabs.365.altium.com/designs/A79E618E-7113-4BD9-AB95-6F9120FF25BC
 
 ## 3. Hardware & Software Requirements
 This section reviews our original hardware and software requirements, outlines our testing process, and notes whether each was met.
@@ -151,6 +151,45 @@ This section reviews our original hardware and software requirements, outlines o
 - Synced data and responded to control commands via Wi-Fi every 1s.
 
 ## 4. Project Photos & Screenshots
+
+### Final Assembly
+- **Completed Robot**  
+  ![Final Project](Final_Project.jpg)
+
+### Hardware: PCBA
+- **Top View**  
+  ![PCBA_top](PCBA_top.jpg)
+- **Bottom View**  
+  ![PCBA_bottom](PCBA_bottom.jpg)
+
+### Thermal Imaging
+- **Thermal Camera Snapshot**  
+  ![Thermal_camera_image](Thermal_camera_image.jpg)
+
+### Altium Board Design
+- **2D Layout**  
+  ![Altium_2D](Altium_2D.png)
+- **3D View - Perspective 1**  
+  ![Altium_3D](Altium_3D.png)
+- **3D View - Perspective 2**  
+  ![Altium_3D_2](Altium_3D_2.png)
+
+### Software: Node-RED Interface
+- **Dashboard Interface**  
+  ![Node_RED_dashboard](Node_RED_dashboard.png)
+- **Backend Flow - Part 1**  
+  ![Node_RED_backend_1](Node_RED_backend_1.png)
+- **Backend Flow - Part 2**  
+  ![Node_RED_backend_2](Node_RED_backend_2.png)
+
+### System Overview
+- **Block Diagram**  
+  ![Detailed System Block Diagram](Detailed%20System%20Block%20Diagram.png)
+
+
+
+
+
 
 ## Codebase
 
