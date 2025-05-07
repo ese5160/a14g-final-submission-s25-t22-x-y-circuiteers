@@ -27,10 +27,10 @@ Bobi enables real-time monitoring of **temperature**, **humidity**, **air qualit
 Bobi features two core functionalities: **movement** and **environment monitoring**.
 
 - **Movement**:  
-  A servo driver board connected to the SAMW25 microcontroller controls eight servo motors to operate Bobi’s legs. Pressing the **touch sensor** triggers a playful wiggle, while the **gesture sensor** detects hand waves to turn Bobi left or right.
+  A servo driver board connected to the SAMW25 microcontroller controls eight servo motors to operate Bobi’s legs. Bobi can move forward, backward, turn left or right, say hi, lie, wiggle, fighting, push up, sleep, dance and warm up. Pressing the **touch sensor** triggers a playful wiggle, while the **gesture sensor** detects hand waves to turn Bobi left or right. 
 
 - **Environment Monitoring**:  
-  Bobi monitors **temperature**, **humidity**, **VOC levels (air quality)**, and **obstacle distance**. If any value exceeds the normal range, Bobi displays a warning on-screen and sounds a buzzer. For instance, if something is too close, Bobi beeps and moves backward.
+  Bobi monitors **temperature**, **humidity**, **VOC levels (air quality)**, and **obstacle distance**. If any value exceeds the normal range, Bobi displays a warning on-screen and sounds a buzzer. For example, if an object is detected too close by the ultrasonic sensor, Bobi will beep and automatically move backward.
 
 - **NFC Integration**:  
   Tapping a phone on Bobi’s leg triggers a custom message display on the screen.
