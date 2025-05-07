@@ -29,5 +29,5 @@
 secret.h
 
 # no source files allowed in final repo
-*.c
-*.h 
+#*.c
+#*.h 
