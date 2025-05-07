@@ -193,7 +193,11 @@ This section reviews our original hardware and software requirements, outlines o
 
 ## Codebase
 
-- A link to your final embedded C firmware codebases
-- A link to your Node-RED dashboard code
-- Links to any other software required for the functionality of your device
+- **Final Embedded C Firmware Codebase**  
+   [**final embedded C firmware codebases**](final embedded C firmware codebases)
+
+- **Node-RED Dashboard Code**  
+  [**final_node_red**](final_node_red)
+
+
 

@@ -1,0 +1,1607 @@
+[
+    {
+        "id": "80e1a0e60252a46e",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "fbc5ef9703a00d2c",
+        "type": "ui_button",
+        "z": "80e1a0e60252a46e",
+        "name": "Forward",
+        "group": "9090bc7c0910fadc",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "FORWARD",
+        "tooltip": "",
+        "color": "#ffffff",
+        "bgcolor": "#009fdb",
+        "className": "",
+        "icon": "fa-arrow-up",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "forward",
+        "topicType": "str",
+        "x": 140,
+        "y": 180,
+        "wires": [
+            [
+                "9af898cea8d817ac"
+            ]
+        ]
+    },
+    {
+        "id": "9b9ab05d73798b76",
+        "type": "ui_button",
+        "z": "80e1a0e60252a46e",
+        "name": "Backward",
+        "group": "9090bc7c0910fadc",
+        "order": 2,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "BACKWARD",
+        "tooltip": "",
+        "color": "#ffffff",
+        "bgcolor": "#009fdb",
+        "className": "",
+        "icon": "fa-arrow-down",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "backward",
+        "topicType": "str",
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "9af898cea8d817ac"
+            ]
+        ]
+    },
+    {
+        "id": "d9b6cd3e24d2393b",
+        "type": "ui_button",
+        "z": "80e1a0e60252a46e",
+        "name": "Turn Left",
+        "group": "9090bc7c0910fadc",
+        "order": 3,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "TURN LEFT",
+        "tooltip": "",
+        "color": "#ffffff",
+        "bgcolor": "#009fdb",
+        "className": "",
+        "icon": "fa-arrow-left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "turn_left",
+        "topicType": "str",
+        "x": 140,
+        "y": 260,
+        "wires": [
+            [
+                "9af898cea8d817ac"
+            ]
+        ]
+    },
+    {
+        "id": "62ada0dad2f527c2",
+        "type": "ui_button",
+        "z": "80e1a0e60252a46e",
+        "name": "Turn Right",
+        "group": "9090bc7c0910fadc",
+        "order": 4,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "TURN RIGHT",
+        "tooltip": "",
+        "color": "#ffffff",
+        "bgcolor": "#009fdb",
+        "className": "",
+        "icon": "fa-arrow-right",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "turn_right",
+        "topicType": "str",
+        "x": 150,
+        "y": 300,
+        "wires": [
+            [
+                "9af898cea8d817ac"
+            ]
+        ]
+    },
+    {
+        "id": "3bd1e241e7912825",
+        "type": "ui_button",
+        "z": "80e1a0e60252a46e",
+        "name": "Say Hi",
+        "group": "9090bc7c0910fadc",
+        "order": 5,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Say Hi",
+        "tooltip": "",
+        "color": "#ffffff",
+        "bgcolor": "#007cad",
+        "className": "",
+        "icon": "fa-hand-paper-o",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "say_hi",
+        "topicType": "str",
+        "x": 130,
+        "y": 340,
+        "wires": [
+            [
+                "9af898cea8d817ac"
+            ]
+        ]
+    },
+    {
+        "id": "b9d43352f6da3928",
+        "type": "ui_button",
+        "z": "80e1a0e60252a46e",
+        "name": "Lie",
+        "group": "9090bc7c0910fadc",
+        "order": 6,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Lie",
+        "tooltip": "",
+        "color": "#ffffff",
+        "bgcolor": "#007cad",
+        "className": "",
+        "icon": "fa-bed",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "lie",
+        "topicType": "str",
+        "x": 130,
+        "y": 380,
+        "wires": [
+            [
+                "9af898cea8d817ac"
+            ]
+        ]
+    },
+    {
+        "id": "07d8645593f33f49",
+        "type": "ui_button",
+        "z": "80e1a0e60252a46e",
+        "name": "Wiggle",
+        "group": "9090bc7c0910fadc",
+        "order": 7,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "WIGGLE",
+        "tooltip": "",
+        "color": "#ffffff",
+        "bgcolor": "#00587d",
+        "className": "",
+        "icon": "fa-random",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "wiggle",
+        "topicType": "str",
+        "x": 130,
+        "y": 420,
+        "wires": [
+            [
+                "9af898cea8d817ac"
+            ]
+        ]
+    },
+    {
+        "id": "9af898cea8d817ac",
+        "type": "function",
+        "z": "80e1a0e60252a46e",
+        "name": "Set Action",
+        "func": "msg.payload = msg.topic;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 160,
+        "wires": [
+            [
+                "b99ff1d5a92e4e03",
+                "f533358c6453bd1a",
+                "a4ec261f522d0d46"
+            ]
+        ]
+    },
+    {
+        "id": "b99ff1d5a92e4e03",
+        "type": "mqtt out",
+        "z": "80e1a0e60252a46e",
+        "name": "Motion Command Out",
+        "topic": "robot/mode",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker",
+        "x": 1540,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "aa41b3d08d88c909",
+        "type": "mqtt in",
+        "z": "80e1a0e60252a46e",
+        "name": "Servo Angle Data",
+        "topic": "robot/servo_angles",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 620,
+        "wires": [
+            [
+                "eecc07baf5e6787b",
+                "41a7305cde4452ae"
+            ]
+        ]
+    },
+    {
+        "id": "41a7305cde4452ae",
+        "type": "function",
+        "z": "80e1a0e60252a46e",
+        "name": "Extract Angles",
+        "func": "\nvar p = msg.payload;\nreturn [\n  { payload: p.servo1 },\n  { payload: p.servo2 },\n  { payload: p.servo3 },\n  { payload: p.servo4 },\n  { payload: p.servo5 },\n  { payload: p.servo6 },\n  { payload: p.servo7 },\n  { payload: p.servo8 }\n];\n",
+        "outputs": 8,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 560,
+        "wires": [
+            [
+                "3024f068e25a7ba8"
+            ],
+            [
+                "82f202ea461f8e32"
+            ],
+            [
+                "6ba1290d60dded88"
+            ],
+            [
+                "aee7362b3f93ce30"
+            ],
+            [
+                "df6024e5867cf2a8"
+            ],
+            [
+                "96a22c510202c1b5"
+            ],
+            [
+                "4da8ea761b1bfc23"
+            ],
+            [
+                "a7c9b4b5b5120c97"
+            ]
+        ]
+    },
+    {
+        "id": "3024f068e25a7ba8",
+        "type": "ui_gauge",
+        "z": "80e1a0e60252a46e",
+        "name": "Servo 1",
+        "group": "0397d089272c2866",
+        "order": 1,
+        "width": 3,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Servo 1",
+        "label": "°",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "180",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1520,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "82f202ea461f8e32",
+        "type": "ui_gauge",
+        "z": "80e1a0e60252a46e",
+        "name": "Servo 2",
+        "group": "0397d089272c2866",
+        "order": 3,
+        "width": 3,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Servo 2",
+        "label": "°",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "180",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1520,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "6ba1290d60dded88",
+        "type": "ui_gauge",
+        "z": "80e1a0e60252a46e",
+        "name": "Servo 3",
+        "group": "0397d089272c2866",
+        "order": 5,
+        "width": 3,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Servo 3",
+        "label": "°",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "180",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1520,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "aee7362b3f93ce30",
+        "type": "ui_gauge",
+        "z": "80e1a0e60252a46e",
+        "name": "Servo 4",
+        "group": "0397d089272c2866",
+        "order": 7,
+        "width": 3,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Servo 4",
+        "label": "°",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "180",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1520,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "df6024e5867cf2a8",
+        "type": "ui_gauge",
+        "z": "80e1a0e60252a46e",
+        "name": "Servo 5",
+        "group": "0397d089272c2866",
+        "order": 10,
+        "width": 3,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Servo 5",
+        "label": "°",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "180",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1520,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "96a22c510202c1b5",
+        "type": "ui_gauge",
+        "z": "80e1a0e60252a46e",
+        "name": "Servo 6",
+        "group": "0397d089272c2866",
+        "order": 12,
+        "width": 3,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Servo 6",
+        "label": "°",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "180",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1520,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "4da8ea761b1bfc23",
+        "type": "ui_gauge",
+        "z": "80e1a0e60252a46e",
+        "name": "Servo 7",
+        "group": "0397d089272c2866",
+        "order": 14,
+        "width": 3,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Servo 7",
+        "label": "°",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "180",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1520,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "a7c9b4b5b5120c97",
+        "type": "ui_gauge",
+        "z": "80e1a0e60252a46e",
+        "name": "Servo 8",
+        "group": "0397d089272c2866",
+        "order": 16,
+        "width": 3,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Servo 8",
+        "label": "°",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "180",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1520,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "d98b31ec5ae128b4",
+        "type": "mqtt in",
+        "z": "80e1a0e60252a46e",
+        "name": "Env MQTT",
+        "topic": "env/data",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 980,
+        "wires": [
+            [
+                "43981ef38c72a3fb",
+                "0f29fe2665e601e5"
+            ]
+        ]
+    },
+    {
+        "id": "43981ef38c72a3fb",
+        "type": "function",
+        "z": "80e1a0e60252a46e",
+        "name": "Parse and Evaluate",
+        "func": "let { temperature, humidity, voc, distance, touch } = msg.payload;\n\n// Scale into human units\nlet temp = temperature / 100;   // e.g. 2800 → 28°C\nlet hum  = humidity    / 100;   // e.g. 5000 → 50%\nlet vocN = voc         / 100;   // e.g. 42000 → 420 ppb\nlet dist = distance    / 100;   // e.g. 800   → 8 cm\nlet isTouched = touch ? 1 : 0;  // already 1 or 0\n\n//  HTML alerts\nfunction formatAlert(type, message, value, unit) {\n    const color = (type === \"WARNING\" || type === \"DANGER\") ? \"red\" : \"black\";\n    return `\n      <span style=\"\n        display: block;\n        text-align: left;\n        margin: 5px 0;\n        font-weight: bold;\n        color: ${color};\n      \">\n        ${type}: ${message}${value != null ? ` (${value}${unit})` : \"\"}\n      </span>\n    `;\n}\n\n// 4) Build each of the four alert messages\nlet tempAlert = temp < 20\n    ? formatAlert(\"WARNING\", \"Room too cold – increase heating\", temp, \"°C\")\n    : temp > 35\n        ? formatAlert(\"WARNING\", \"Room too hot – increase cooling\", temp, \"°C\")\n        : formatAlert(\"NORMAL\",  \"Temperature normal\",       temp, \"°C\");\n\nlet humAlert = hum < 30\n    ? formatAlert(\"WARNING\", \"Room too dry – use humidifier\", hum, \"%\")\n    : hum > 70\n        ? formatAlert(\"WARNING\", \"Room too humid – use dehumidifier\", hum, \"%\")\n        : formatAlert(\"NORMAL\",  \"Humidity normal\", hum, \"%\");\n\nlet vocAlert = vocN > 600\n    ? formatAlert(\"WARNING\", \"Poor air quality – ventilate\", vocN, \"ppb\")\n    : vocN > 250\n        ? formatAlert(\"CAUTION\", \"Moderate air quality\", vocN, \"ppb\")\n        : formatAlert(\"NORMAL\",   \"Air quality good\", vocN, \"ppb\");\n\nlet distAlert = dist < 5\n    ? formatAlert(\"DANGER\", \"Obstacle very close!\", dist, \"cm\")\n    : dist < 10\n        ? formatAlert(\"CAUTION\", \"Obstacle nearby\", dist, \"cm\")\n        : formatAlert(\"NORMAL\",  \"Path clear\", dist, \"cm\");\n\n// 5) Return one message per output port:\nreturn [\n    { payload: temp,   topic: \"temperature\", alert: tempAlert,   alertStatus: (temp >= 20 && temp <= 35) ? \"normal\" : \"alert\" },\n    { payload: hum,    topic: \"humidity\",    alert: humAlert,    alertStatus: (hum >= 30  && hum <= 70) ? \"normal\" : \"alert\" },\n    { payload: vocN,   topic: \"voc\",         alert: vocAlert,    alertStatus: (vocN <= 250) ? \"normal\" : (vocN <= 400 ? \"warning\" : \"alert\") },\n    { payload: dist,   topic: \"distance\",    alert: distAlert,   alertStatus: (dist >= 10) ? \"normal\" : (dist >= 5 ? \"warning\" : \"alert\") },\n    { payload: isTouched, topic: \"touch\" }\n];\n",
+        "outputs": 5,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 1020,
+        "wires": [
+            [
+                "5b78ed01a42bf147",
+                "28dcf90a1d5c5012"
+            ],
+            [
+                "c5c7f79645e1d50b",
+                "701e01f4b9f0be71"
+            ],
+            [
+                "c0bceeee37360347",
+                "683baf8859498ff0"
+            ],
+            [
+                "1c762d0ffe2e8740",
+                "36e4fdc12e082348"
+            ],
+            [
+                "8bd094b167e6fe9d",
+                "9cc0c890e686674f"
+            ]
+        ]
+    },
+    {
+        "id": "5b78ed01a42bf147",
+        "type": "ui_gauge",
+        "z": "80e1a0e60252a46e",
+        "name": "Temperature",
+        "group": "e4058ad6666ef9ee",
+        "order": 2,
+        "width": 3,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "20",
+        "seg2": "35",
+        "diff": false,
+        "className": "",
+        "x": 1530,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "c5c7f79645e1d50b",
+        "type": "ui_gauge",
+        "z": "80e1a0e60252a46e",
+        "name": "Humidity",
+        "group": "e4058ad6666ef9ee",
+        "order": 4,
+        "width": 3,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#00b500",
+            "#ca3838"
+        ],
+        "seg1": "30",
+        "seg2": "70",
+        "className": "",
+        "x": 1520,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "c0bceeee37360347",
+        "type": "ui_gauge",
+        "z": "80e1a0e60252a46e",
+        "name": "VOC",
+        "group": "e4058ad6666ef9ee",
+        "order": 10,
+        "width": 3,
+        "height": 2,
+        "gtype": "gage",
+        "title": "VOC",
+        "label": "ppb",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "200",
+        "seg2": "400",
+        "diff": false,
+        "className": "",
+        "x": 1510,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "1c762d0ffe2e8740",
+        "type": "ui_gauge",
+        "z": "80e1a0e60252a46e",
+        "name": "Distance",
+        "group": "e4058ad6666ef9ee",
+        "order": 12,
+        "width": 3,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Distance",
+        "label": "cm",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "5",
+        "seg2": "10",
+        "diff": false,
+        "className": "",
+        "x": 1520,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "8bd094b167e6fe9d",
+        "type": "ui_led",
+        "z": "80e1a0e60252a46e",
+        "order": 1,
+        "group": "be9d386f01390f6d",
+        "width": 5,
+        "height": 1,
+        "label": "Touch triggers green light",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "1",
+                "valueType": "num"
+            },
+            {
+                "color": "#808080",
+                "value": "0",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Touch Status",
+        "x": 1530,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "25967abd823e416e",
+        "type": "inject",
+        "z": "80e1a0e60252a46e",
+        "name": "simulate env1",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"temperature\":1000,\"humidity\":5000,\"voc\":42000,\"distance\":800,\"touch\":1}",
+        "payloadType": "json",
+        "x": 220,
+        "y": 1040,
+        "wires": [
+            [
+                "43981ef38c72a3fb"
+            ]
+        ]
+    },
+    {
+        "id": "7c943e8442e09ef6",
+        "type": "inject",
+        "z": "80e1a0e60252a46e",
+        "name": "simulate_servo",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"servo1\":45,\"servo2\":90,\"servo3\":135,\"servo4\":180,\"servo5\":120,\"servo6\":60,\"servo7\":30,\"servo8\":150}",
+        "payloadType": "json",
+        "x": 200,
+        "y": 700,
+        "wires": [
+            [
+                "41a7305cde4452ae"
+            ]
+        ]
+    },
+    {
+        "id": "d22d8ec651431d78",
+        "type": "inject",
+        "z": "80e1a0e60252a46e",
+        "name": "simulate env2",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"temperature\":3700,\"humidity\":1000,\"voc\":30000,\"distance\":20000,\"touch\":0}",
+        "payloadType": "json",
+        "x": 220,
+        "y": 1120,
+        "wires": [
+            [
+                "43981ef38c72a3fb"
+            ]
+        ]
+    },
+    {
+        "id": "ceeb1c53634bf7a8",
+        "type": "inject",
+        "z": "80e1a0e60252a46e",
+        "name": "simulate_servo",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"servo1\":15,\"servo2\":20,\"servo3\":15,\"servo4\":10,\"servo5\":17,\"servo6\":120,\"servo7\":170,\"servo8\":10}",
+        "payloadType": "json",
+        "x": 200,
+        "y": 780,
+        "wires": [
+            [
+                "41a7305cde4452ae"
+            ]
+        ]
+    },
+    {
+        "id": "f533358c6453bd1a",
+        "type": "debug",
+        "z": "80e1a0e60252a46e",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1500,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "0f29fe2665e601e5",
+        "type": "debug",
+        "z": "80e1a0e60252a46e",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "eecc07baf5e6787b",
+        "type": "debug",
+        "z": "80e1a0e60252a46e",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "36e4fdc12e082348",
+        "type": "ui_text",
+        "z": "80e1a0e60252a46e",
+        "group": "e4058ad6666ef9ee",
+        "order": 20,
+        "width": 10,
+        "height": 1,
+        "name": "Distance Alert",
+        "label": "",
+        "format": "{{msg.alert}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1540,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "683baf8859498ff0",
+        "type": "ui_text",
+        "z": "80e1a0e60252a46e",
+        "group": "e4058ad6666ef9ee",
+        "order": 19,
+        "width": 10,
+        "height": 1,
+        "name": "VOC Alert",
+        "label": "",
+        "format": "{{msg.alert}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1520,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "701e01f4b9f0be71",
+        "type": "ui_text",
+        "z": "80e1a0e60252a46e",
+        "group": "e4058ad6666ef9ee",
+        "order": 18,
+        "width": 10,
+        "height": 1,
+        "name": "Humidity Alert",
+        "label": "",
+        "format": "{{msg.alert}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": "15",
+        "color": "#000000",
+        "x": 1540,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "28dcf90a1d5c5012",
+        "type": "ui_text",
+        "z": "80e1a0e60252a46e",
+        "group": "e4058ad6666ef9ee",
+        "order": 17,
+        "width": 10,
+        "height": 1,
+        "name": "Temperature Alert",
+        "label": "",
+        "format": "{{msg.alert}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": "15",
+        "color": "#000000",
+        "x": 1550,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "69da4b8214bd01a3",
+        "type": "ui_button",
+        "z": "80e1a0e60252a46e",
+        "name": "Fighting",
+        "group": "9090bc7c0910fadc",
+        "order": 8,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Fighting",
+        "tooltip": "",
+        "color": "#ffffff",
+        "bgcolor": "#00587d",
+        "className": "",
+        "icon": "fa-hand-rock-o",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "fighting",
+        "topicType": "str",
+        "x": 140,
+        "y": 460,
+        "wires": [
+            [
+                "9af898cea8d817ac"
+            ]
+        ]
+    },
+    {
+        "id": "bc5e52f85fd49ad0",
+        "type": "ui_button",
+        "z": "80e1a0e60252a46e",
+        "name": "Push up",
+        "group": "9090bc7c0910fadc",
+        "order": 9,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Push up",
+        "tooltip": "",
+        "color": "#ffffff",
+        "bgcolor": "#00587d",
+        "className": "",
+        "icon": "fa-arrow-circle-up",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "push_up",
+        "topicType": "str",
+        "x": 140,
+        "y": 100,
+        "wires": [
+            [
+                "9af898cea8d817ac"
+            ]
+        ]
+    },
+    {
+        "id": "56484b81ca395070",
+        "type": "ui_button",
+        "z": "80e1a0e60252a46e",
+        "name": "Sleep",
+        "group": "9090bc7c0910fadc",
+        "order": 10,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Sleep",
+        "tooltip": "",
+        "color": "#ffffff",
+        "bgcolor": "#00587d",
+        "className": "",
+        "icon": "fa-moon-o",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "sleep",
+        "topicType": "str",
+        "x": 130,
+        "y": 500,
+        "wires": [
+            [
+                "9af898cea8d817ac"
+            ]
+        ]
+    },
+    {
+        "id": "143521eb3aee62fe",
+        "type": "ui_button",
+        "z": "80e1a0e60252a46e",
+        "name": "Dance",
+        "group": "9090bc7c0910fadc",
+        "order": 11,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Dance",
+        "tooltip": "",
+        "color": "#ffffff",
+        "bgcolor": "#00587d",
+        "className": "",
+        "icon": "fa-music",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "dance",
+        "topicType": "str",
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "9af898cea8d817ac"
+            ]
+        ]
+    },
+    {
+        "id": "5737b9ceed0c4f06",
+        "type": "ui_button",
+        "z": "80e1a0e60252a46e",
+        "name": "Warmup",
+        "group": "9090bc7c0910fadc",
+        "order": 12,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Warmup",
+        "tooltip": "",
+        "color": "#ffffff",
+        "bgcolor": "#00587d",
+        "className": "",
+        "icon": "fa-fire",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "warmup",
+        "topicType": "str",
+        "x": 140,
+        "y": 60,
+        "wires": [
+            [
+                "9af898cea8d817ac"
+            ]
+        ]
+    },
+    {
+        "id": "9fca2fe77a88f44b",
+        "type": "ui_button",
+        "z": "80e1a0e60252a46e",
+        "name": "OTA Update (fw)",
+        "group": "3dffe26f39d3b1b0",
+        "order": 2,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "OTA Update (fw)",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-upload",
+        "payload": "fw",
+        "payloadType": "str",
+        "topic": "device/ota_command",
+        "topicType": "msg",
+        "x": 220,
+        "y": 1240,
+        "wires": [
+            [
+                "fe9c978cdd9b9e1a"
+            ]
+        ]
+    },
+    {
+        "id": "9a87be5fdb3a1223",
+        "type": "ui_button",
+        "z": "80e1a0e60252a46e",
+        "name": "Golden Image (gold)",
+        "group": "3dffe26f39d3b1b0",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Golden Image (gold)",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-star",
+        "payload": "gold",
+        "payloadType": "str",
+        "topic": "device/ota_command",
+        "topicType": "msg",
+        "x": 240,
+        "y": 1340,
+        "wires": [
+            [
+                "fe9c978cdd9b9e1a"
+            ]
+        ]
+    },
+    {
+        "id": "fe9c978cdd9b9e1a",
+        "type": "mqtt out",
+        "z": "80e1a0e60252a46e",
+        "name": "Motion Command Out",
+        "topic": "device/ota_command",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker",
+        "x": 1540,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "4ddfbc88e255bbdd",
+        "type": "mqtt out",
+        "z": "80e1a0e60252a46e",
+        "name": "Gesture Command Out",
+        "topic": "robot/mode",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker",
+        "x": 1550,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "8a7111b6b2757779",
+        "type": "ui_text",
+        "z": "80e1a0e60252a46e",
+        "group": "9090bc7c0910fadc",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "name": "Status Display",
+        "label": "Current Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1520,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "a4ec261f522d0d46",
+        "type": "function",
+        "z": "80e1a0e60252a46e",
+        "name": "Uppercase",
+        "func": "msg.payload = msg.payload.toUpperCase();\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1350,
+        "y": 140,
+        "wires": [
+            [
+                "8a7111b6b2757779"
+            ]
+        ]
+    },
+    {
+        "id": "9cc0c890e686674f",
+        "type": "debug",
+        "z": "80e1a0e60252a46e",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1520,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "36e2378acdbb39b9",
+        "type": "ui_switch",
+        "z": "80e1a0e60252a46e",
+        "name": "",
+        "label": "Gesture Recognition",
+        "tooltip": "Gesture recognition starts when the switch is on; otherwise, it stays off.",
+        "group": "227d3b690e8a5ca6",
+        "order": 1,
+        "width": 5,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "robot/mode",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "start",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "stop",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 220,
+        "y": 1540,
+        "wires": [
+            [
+                "4ddfbc88e255bbdd",
+                "adaf1d40e4a1f4e8"
+            ]
+        ]
+    },
+    {
+        "id": "adaf1d40e4a1f4e8",
+        "type": "debug",
+        "z": "80e1a0e60252a46e",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1500,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "4bdad8bc2a1cd72b",
+        "type": "ui_spacer",
+        "z": "80e1a0e60252a46e",
+        "name": "spacer",
+        "group": "0397d089272c2866",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "4db776d1c4fe6b9c",
+        "type": "ui_spacer",
+        "z": "80e1a0e60252a46e",
+        "name": "spacer",
+        "group": "0397d089272c2866",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "d0f6c1cc2c97a16a",
+        "type": "ui_spacer",
+        "z": "80e1a0e60252a46e",
+        "name": "spacer",
+        "group": "0397d089272c2866",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "a40fb7aaccd502e2",
+        "type": "ui_spacer",
+        "z": "80e1a0e60252a46e",
+        "name": "spacer",
+        "group": "0397d089272c2866",
+        "order": 8,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "a2d1e76b699f274f",
+        "type": "ui_spacer",
+        "z": "80e1a0e60252a46e",
+        "name": "spacer",
+        "group": "0397d089272c2866",
+        "order": 9,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "a57c420d7506e6ad",
+        "type": "ui_spacer",
+        "z": "80e1a0e60252a46e",
+        "name": "spacer",
+        "group": "0397d089272c2866",
+        "order": 11,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "99e8543d6529fe71",
+        "type": "ui_spacer",
+        "z": "80e1a0e60252a46e",
+        "name": "spacer",
+        "group": "0397d089272c2866",
+        "order": 13,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "744b835c4a9ccc6f",
+        "type": "ui_spacer",
+        "z": "80e1a0e60252a46e",
+        "name": "spacer",
+        "group": "0397d089272c2866",
+        "order": 15,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "620e29f866d25044",
+        "type": "ui_spacer",
+        "z": "80e1a0e60252a46e",
+        "name": "spacer",
+        "group": "0397d089272c2866",
+        "order": 17,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "33a61f73b25c2809",
+        "type": "ui_spacer",
+        "z": "80e1a0e60252a46e",
+        "name": "spacer",
+        "group": "e4058ad6666ef9ee",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "bf37a15d677a0265",
+        "type": "ui_spacer",
+        "z": "80e1a0e60252a46e",
+        "name": "spacer",
+        "group": "e4058ad6666ef9ee",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "edc098748422f6ea",
+        "type": "ui_spacer",
+        "z": "80e1a0e60252a46e",
+        "name": "spacer",
+        "group": "e4058ad6666ef9ee",
+        "order": 5,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "da9d13afebe0d2a4",
+        "type": "ui_spacer",
+        "z": "80e1a0e60252a46e",
+        "name": "spacer",
+        "group": "e4058ad6666ef9ee",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "2a83364ce5c1dfb0",
+        "type": "ui_spacer",
+        "z": "80e1a0e60252a46e",
+        "name": "spacer",
+        "group": "e4058ad6666ef9ee",
+        "order": 7,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "6fb04086bf3ed43d",
+        "type": "ui_spacer",
+        "z": "80e1a0e60252a46e",
+        "name": "spacer",
+        "group": "e4058ad6666ef9ee",
+        "order": 8,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "7c5b4ae9a9389771",
+        "type": "ui_spacer",
+        "z": "80e1a0e60252a46e",
+        "name": "spacer",
+        "group": "e4058ad6666ef9ee",
+        "order": 9,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "04bc08b702754644",
+        "type": "ui_spacer",
+        "z": "80e1a0e60252a46e",
+        "name": "spacer",
+        "group": "e4058ad6666ef9ee",
+        "order": 11,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "53f2de57fc785b8e",
+        "type": "ui_spacer",
+        "z": "80e1a0e60252a46e",
+        "name": "spacer",
+        "group": "e4058ad6666ef9ee",
+        "order": 13,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "f4dd61ea106eeac6",
+        "type": "ui_spacer",
+        "z": "80e1a0e60252a46e",
+        "name": "spacer",
+        "group": "e4058ad6666ef9ee",
+        "order": 14,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "45c6065dbc8dca4c",
+        "type": "ui_spacer",
+        "z": "80e1a0e60252a46e",
+        "name": "spacer",
+        "group": "e4058ad6666ef9ee",
+        "order": 15,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "48a2526e5d8fb4fa",
+        "type": "ui_spacer",
+        "z": "80e1a0e60252a46e",
+        "name": "spacer",
+        "group": "e4058ad6666ef9ee",
+        "order": 16,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "9090bc7c0910fadc",
+        "type": "ui_group",
+        "name": "Movement Control",
+        "tab": "robot_dashboard_tab",
+        "order": 5,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "mqtt_broker",
+        "type": "mqtt-broker",
+        "name": "Your MQTT Broker",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "0397d089272c2866",
+        "type": "ui_group",
+        "name": "Servo Angles",
+        "tab": "robot_dashboard_tab",
+        "order": 1,
+        "disp": true,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e4058ad6666ef9ee",
+        "type": "ui_group",
+        "name": "Environment Monitoring",
+        "tab": "robot_dashboard_tab",
+        "order": 6,
+        "disp": true,
+        "width": 10,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "be9d386f01390f6d",
+        "type": "ui_group",
+        "name": "Touch Detection",
+        "tab": "robot_dashboard_tab",
+        "order": 3,
+        "disp": true,
+        "width": 5,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3dffe26f39d3b1b0",
+        "type": "ui_group",
+        "name": "Over The Air Firmware Updates",
+        "tab": "robot_dashboard_tab",
+        "order": 2,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "227d3b690e8a5ca6",
+        "type": "ui_group",
+        "name": "Gesture Detection",
+        "tab": "robot_dashboard_tab",
+        "order": 4,
+        "disp": true,
+        "width": 5,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "robot_dashboard_tab",
+        "type": "ui_tab",
+        "name": "Hi! This is Bobi",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
