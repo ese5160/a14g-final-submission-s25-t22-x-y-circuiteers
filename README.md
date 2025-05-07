@@ -194,7 +194,7 @@ This section reviews our original hardware and software requirements, outlines o
 ## Codebase
 
 - **Final Embedded C Firmware Codebase**  
-   [**final embedded C firmware codebases**](final_embedded_C)
+   [**firmware_code**](firmware_code)
 
 - **Node-RED Dashboard Code**  
   [**final_node_red**](final_node_red.json)
