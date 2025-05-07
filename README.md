@@ -77,10 +77,78 @@ Through **ESE5160**, we gained practical skills in:
 This course gave us end-to-end experience in building a complete IoT system, blending embedded systems with real-world applications.
 
 ### Project Links
-Frontend_Node_RED Link: http://52.224.120.179:1880/ui/#!/0?socketid=mmrCvhwkhdHmjPopAADz
-Backend_Node_RED Link: http://52.224.120.179:1880/#flow/80e1a0e60252a46e
+Frontend Node_RED Link: http://52.224.120.179:1880/ui/#!/0?socketid=mmrCvhwkhdHmjPopAADz
+Backend Node_RED Link: http://52.224.120.179:1880/#flow/80e1a0e60252a46e
+PCBA on Altium 365： https://upenn-eselabs.365.altium.com/designs/A79E618E-7113-4BD9-AB95-6F9120FF25BC
 
 ## 3. Hardware & Software Requirements
+This section reviews our original hardware and software requirements, outlines our testing process, and notes whether each was met.
+
+### Hardware Requirements Specification (HRS)
+
+#### **HRS 01 – Core Microcontroller**  
+- *Met.*  
+- Used SAMW25 with Wi-Fi and support for I2C, SPI, UART, and PWM. All interfaces worked as needed.
+
+#### **HRS 02 – Ultrasonic Sensor**  
+- *Met.*  
+- Accurately detected obstacles in the 10–25 cm range. Triggered backward movement when too close.
+
+#### **HRS 03 – Temperature and Humidity Sensor**  
+- *Met.*  
+- Compared with external meter; readings within acceptable error (±2°C, ±5%).
+
+#### **HRS 04 – Air Quality Sensor**  
+- *Met.*  
+- VOC values responded correctly. Alerts triggered above 400 ppb.
+
+#### **HRS 05 – Touch Sensor**  
+- *Met.*  
+- Touch triggered servo movement reliably in all test cases.
+
+#### **HRS 06 – LCD Display**  
+- *Met.*  
+- Displayed real-time temperature, humidity, VOC, distance, and movement state.
+
+#### **HRS 07 – Buzzer**  
+- *Met.*  
+- Activated during environmental alerts; sound was clear and consistent.
+
+#### **HRS 08 – Servo Motors**  
+- *Met.*  
+- Controlled all 8 servos with stable PWM updates; motion patterns tested successfully.
+
+#### **HRS 09 – Power System**  
+- *Partially Met.*  
+- Used Li-Ion battery with buck/boost circuits. Power dips occurred under heavy servo load; improvement needed.
+
+#### **HRS 10 – Structure and Materials**  
+- *Met.*  
+- Used 3D-printed parts. Frame was stable, total weight < 4 kg.
+
+---
+
+### Software Requirements Specification (SRS)
+
+#### **SRS 01 – Servo Motor Control**  
+- *Met.*  
+- PWM updated every 50 ms. Predefined motions ran smoothly.
+
+#### **SRS 02 – Obstacle Detection and Avoidance**  
+- *Met.*  
+- Sampled every 1s. Avoidance triggered at <10 cm.
+
+#### **SRS 03 – Environmental Data & Alerts**  
+- *Met.*  
+- Collected every 1s. Alerts worked at defined thresholds (e.g., VOC > 600 ppb).
+
+#### **SRS 04 – Touch Response**  
+- *Met.*  
+- Touch caused consistent wiggle action.
+
+#### **SRS 05 – Communication & Remote Control**  
+- *Met.*  
+- Synced data and responded to control commands via Wi-Fi every 1s.
 
 ## 4. Project Photos & Screenshots
 
