@@ -67,6 +67,8 @@ If we were to redesign Bobi, we would:
 For future iterations, we plan to:
 - Add more gesture types for expanded interaction.
 - Offload data processing to the cloud to reduce local memory usage.
+- Add a camera for face, number, and expression recognition to enhance user interaction.
+- Integrate a motion-sensing glove to trigger actions like sitting via specific gestures.
 
 Through **ESE5160**, we gained practical skills in:
 - **PCB design**
